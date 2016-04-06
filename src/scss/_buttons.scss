@@ -1,0 +1,23 @@
+
+@mixin buttons(){
+        @each $name, $color in $colors{
+            .#{$name}-button{
+              background: color($name, base);
+              border-radius: 100px ;
+              text-align: center;
+              border: none;
+              //color: color(white, base);
+              padding: 10px 20px;
+              margin: 20px auto;
+              //@include font(1.66em, $font-family);
+              display: block;
+              font-weight: 500;
+              float: none;
+              &:hover{
+                 background: color($name, dark);
+                  cursor: pointer;
+              }
+            }
+        }
+      }
+ @include buttons();

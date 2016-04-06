@@ -1,0 +1,36 @@
+
+$colors: (
+      // Darker Blue
+      primary1: (
+        base: #20242d,
+        light: lighten(#20242d, 15%),
+        dark: darken(#20242d, 15%)
+      ),
+      primary2: (
+        base: #393f47,
+        light: lighten(#393f47, 15%),
+        dark: darken(#393f47, 15%)
+      ),
+      primary3: (
+        base: #434a54,
+        light: lighten(#434a54, 15%),
+        dark: darken(#434a54, 15%)
+      ),
+      primary4: (
+        base: #535a64,
+        light: lighten(#535a64, 15%),
+        dark: darken(#535a64, 15%)
+      ),
+      primary5: (
+        base: #4fc1e9,
+        light: lighten(#4fc1e9, 15%),
+        dark: darken(#4fc1e9, 15%)
+      )
+  );
+
+  //---------- FUNCTIONS ------------//
+
+      // color map function
+      @function color($color-name, $color-variant) {
+        @return map-get(map-get($colors, $color-name), $color-variant);
+      }

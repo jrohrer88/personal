@@ -15,8 +15,5 @@
 </template>
 
 <style lang="scss">
-    @import '../scss/base.scss';
-    nav {
-        background-color: $grey;
-    }
+    @import '../scss/_logic.scss';
 </style>

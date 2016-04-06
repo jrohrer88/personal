@@ -1,1 +1,6 @@
-$grey: #ccc;
+@import "_logic.scss";
+@import "_buttons.scss";
+
+body{
+  background: color(primary1, base);
+}
