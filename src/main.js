@@ -1,8 +1,48 @@
-import Vue from 'vue'
-import App from './App'
+// modules
+import Vue from 'vue';
+import Router from 'vue-router';
 
-/* eslint-disable no-new */
-new Vue({
-  el: 'body',
-  components: { App }
-})
+// Vue's
+import Root from './root';
+import Home from './pages/home';
+import About from './pages/about';
+import Contact from './pages/contact';
+import Dashboard from './pages/dashboard';
+import Picblend from './pages/picblend';
+
+// libraries
+import draggable from './js/directives/draggable';
+
+// App code
+Vue.use(Router);
+
+let router = new Router();
+
+router.map({
+    '/': {
+        name: 'home',
+        component: Home
+    },
+    '/about': {
+        name: 'about',
+        component: About
+    },
+    '/contact': {
+        name: 'contact',
+        component: Contact
+    },
+    '/dash': {
+        name: 'dash',
+        component: Dashboard,
+        subRoutes: {
+            '/picblend': {
+                name: 'picblend',
+                component: Picblend
+            }
+        }
+    }
+});
+
+draggable(Vue);
+
+router.start(Root, 'body');
