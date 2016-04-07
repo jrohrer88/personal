@@ -3,47 +3,54 @@
     <h1>Project Edwards - Style Guide</h1>
 
     <div class="row">
-      <h1>01 Color Palettes</h1>
-      <h2>Primary Colors</h2>
+      <h2>01 Color Palettes</h2>
+      <hr >
+
       <div class="col-md-12">
+
         <ul class="colorsStyleguide primary">
-          <li class="primary1 col-md-1"><div class="color"></div><div class="colorHex"></div></li>
-          <li class="primary2"><div class="color"></div><div class="colorHex"></div></li>
-          <li class="primary3"><div class="color"></div><div class="colorHex"></div></li>
-          <li class="primary4"><div class="color"></div><div class="colorHex"></div></li>
-          <li class="primary5"><div class="color"></div><div class="colorHex"></div></li>
-          <li class="primary6"><div class="color"></div><div class="colorHex"></div></li>
-          <li class="primary7"><div class="color"></div><div class="colorHex"></div></li>
+          <h4>Primary Colors</h4>
+          <li class="primary1"><div class="colorName"></div><div class="color"></div><div class="colorHex"></div></li>
+          <li class="primary2"><div class="colorName"></div><div class="color"></div><div class="colorHex"></div></li>
+          <li class="primary3"><div class="colorName"></div><div class="color"></div><div class="colorHex"></div></li>
+          <li class="primary4"><div class="colorName"></div><div class="color"></div><div class="colorHex"></div></li>
+          <li class="primary5"><div class="colorName"></div><div class="color"></div><div class="colorHex"></div></li>
+          <li class="primary6"><div class="colorName"></div><div class="color"></div><div class="colorHex"></div></li>
+          <li class="primary7"><div class="colorName"></div><div class="color"></div><div class="colorHex"></div></li>
         </ul>
         <ul class="colorsStyleguide secondary">
-          <li class="secondary1"><div class="color"></div><div class="colorHex"></div></li>
-          <li class="secondary2"><div class="color"></div><div class="colorHex"></div></li>
-          <li class="secondary3"><div class="color"></div><div class="colorHex"></div></li>
-          <li class="secondary4"><div class="color"></div><div class="colorHex"></div></li>
-          <li class="secondary5"><div class="color"></div><div class="colorHex"></div></li>
+          <h4>Secondary Colors</h4>
+          <li class="secondary1"><div class="colorName"></div><div class="color"></div><div class="colorHex"></div></li>
+          <li class="secondary2"><div class="colorName"></div><div class="color"></div><div class="colorHex"></div></li>
+          <li class="secondary3"><div class="colorName"></div><div class="color"></div><div class="colorHex"></div></li>
+          <li class="secondary4"><div class="colorName"></div><div class="color"></div><div class="colorHex"></div></li>
+          <li class="secondary5"><div class="colorName"></div><div class="color"></div><div class="colorHex"></div></li>
         </ul>
         <ul class="colorsStyleguide accents">
-          <li class="accent1"><div class="color"></div><div class="colorHex"></div></li>
-          <li class="accent2"><div class="color"></div><div class="colorHex"></div></li>
-          <li class="accent3"><div class="color"></div><div class="colorHex"></div></li>
+          <h4>Accent Colors</h4>
+          <li class="accent1"><div class="colorName"></div><div class="color"></div><div class="colorHex"></div></li>
+          <li class="accent2"><div class="colorName"></div><div class="color"></div><div class="colorHex"></div></li>
+          <li class="accent3"><div class="colorName"></div><div class="color"></div><div class="colorHex"></div></li>
         </ul>
       </div>
     </div>
 
     <div class="row">
-      <h1>02 Typography </h1>
+      <h2>02 Typography </h2>
+      <hr >
       <div class="col-md-3">
-          <h2>Font Family & Styles:</h2>
-          <h3>Roboto </h3>
-          <h3>Roboto Light</h3>
-          <h3>Roboto Medium </h3>
-          <h3>Roboto Condensed</h3>
-          <h3>Roboto Italic</h3>
-          <h3>Roboto Bold</h3>
+          <h4>Font Family & Styles:</h4>
+          <hr >
+          <div class="textEx">Roboto </div>
+          <div class="textEx light">Roboto Light</div>
+          <div class="textEx medium">Roboto Medium </div>
+          <div class="textEx condensed">Roboto Condensed</div>
+          <div class="textEx italic">Roboto Italic</div>
+          <div class="textEx bold">Roboto Bold</div>
       </div>
       <div class="col-md-3">
-        <h2>Body & Lists:</h2>
-
+        <h4>Body & Lists:</h4>
+<hr >
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed urna sed neque blandit gravida vitae bibendum dictum, nisl nisi.</p>
 
 <span>Bold</span> <span>Italic</span> <a href"#">Hyperlink </a>
@@ -57,14 +64,14 @@
 </ol>
       </div>
       <div class="col-md-6">
-        <h2>Headings</h2>
-
+        <h4>Headings</h4>
+        <hr >
         <h1>h1. Bootstrap heading</h1>
-        <h2>h1. Bootstrap heading</h2>
-        <h3>h1. Bootstrap heading</h3>
-        <h4>h1. Bootstrap heading</h4>
-        <h5>h1. Bootstrap heading</h5>
-        <h6>h1. Bootstrap heading</h6>
+        <h2>h2. Bootstrap heading</h2>
+        <h3>h3. Bootstrap heading</h3>
+        <h4>h4. Bootstrap heading</h4>
+        <h5>h5. Bootstrap heading</h5>
+        <h6>h6. Bootstrap heading</h6>
       </div>
     </div>
 
@@ -79,8 +86,10 @@
     float: left;
     padding-right: 5px;
     box-sizing: border-box;
+
     & li{
       float: left;
+      margin: 10px 0;
     }
     &.primary{
       width: 46.67%;
@@ -102,6 +111,10 @@
     }
   }
 
+  .textEx{
+    font-size: 1.5em;
+  }
+
 
   @mixin colorsStyleguide(){
           @each $name, $color in $colors{
@@ -113,6 +126,11 @@
                   box-sizing: border-box;
                   &:hover{
                     background: color($name, dark);
+                  }
+                }
+                & .colorName{
+                  &:after{
+                    content: '' + $name + '';
                   }
                 }
                 & .colorHex{

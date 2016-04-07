@@ -8,6 +8,7 @@ body{
     //font-family: $font-family;
     color: #404040;
     background: #edeef0;
+    @include font(1em ,$font-family, 500);
 }
 
 .full-width{
@@ -22,4 +23,12 @@ body{
     padding: 60px 0;
     overflow: hidden;
     box-sizing: border-box;
+}
+
+hr{
+  border-top-color: #e6e8ec;
+  border-bottom-color: #dfe2e7;
+      border-style: solid;
+      border-left: none;
+      border-right: none;
 }
