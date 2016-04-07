@@ -2,7 +2,7 @@
     <nav>
         <ul>
             <li v-link-active>
-                <a v-link="{ name: 'home'}">Home</a>
+                <a v-link="{ name: 'home', exact: true}">Home</a>
             </li>
             <li v-link-active>
                 <a v-link="{ name: 'about'}">About</a>
