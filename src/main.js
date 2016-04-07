@@ -7,6 +7,7 @@ import Root from './root';
 import Home from './pages/home';
 import About from './pages/about';
 import Contact from './pages/contact';
+import Styleguide from './pages/styleguide';
 import Dashboard from './pages/dashboard';
 import Picblend from './pages/picblend';
 
@@ -30,6 +31,10 @@ router.map({
     '/contact': {
         name: 'contact',
         component: Contact
+    },
+    '/styleguide': {
+        name: 'styleguide',
+        component: Styleguide
     },
     '/dash': {
         name: 'dash',

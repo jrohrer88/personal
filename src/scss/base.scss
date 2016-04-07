@@ -1,6 +1,25 @@
+@import "_reset.scss";
+@import "_columns.scss";
 @import "_logic.scss";
 @import "_buttons.scss";
+@import "_text.scss";
 
 body{
-  background: color(primary1, base);
+    //font-family: $font-family;
+    color: #404040;
+    background: #edeef0;
+}
+
+.full-width{
+    width: 100%;
+    overflow: hidden;
+}
+
+.inner-wrapper{
+    width: 100%;
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: 60px 0;
+    overflow: hidden;
+    box-sizing: border-box;
 }

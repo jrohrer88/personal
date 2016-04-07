@@ -10,6 +10,9 @@
             <li v-link-active>
                 <a v-link="{ name: 'contact'}">Contact</a>
             </li>
+            <li v-link-active>
+                <a v-link="{ name: 'styleguide'}">Style Guide</a>
+            </li>
         </ul>
     </nav>
 </template>
