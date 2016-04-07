@@ -16,7 +16,12 @@ import draggable from './js/directives/draggable';
 // App code
 Vue.use(Router);
 
-let router = new Router();
+let router = new Router({
+    hashbang: false,
+    history: true,
+    linkActiveClass: 'active'
+});
+router.mode = 'html5';
 
 router.map({
     '/': {
@@ -42,6 +47,7 @@ router.map({
         }
     }
 });
+
 
 draggable(Vue);
 
