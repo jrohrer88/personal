@@ -38,9 +38,6 @@ $media: (
                     };
                 }
             }
-
-
-
             .offset-#{$size}-#{$col}{
                 margin-left: unquote($col * 100 / $columns +"%");
                 @media only screen and (max-width: #{$width}) {
@@ -48,7 +45,6 @@ $media: (
                 };
             }
         }
-
         .hide-#{$size}{
             display: block;
             @media only screen and (max-width: #{$width}) {
@@ -61,9 +57,6 @@ $media: (
                display: inline-block;
             };
         }
-
-
-
     }
 }
 
@@ -71,6 +64,15 @@ $media: (
     width: 100%;
     overflow: hidden;
     margin: 30px 0;
+}
+
+.well{
+  padding: 20px;
+  background: color(secondary3, light);
+  border: solid 1px color(secondary3, dark);
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 5px;
 }
 
 @include col();
