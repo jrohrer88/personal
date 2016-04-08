@@ -25,14 +25,6 @@ var proxyTable = config.dev.proxyTable;
 
 var app = express();
 
-// routing/api
-if (db) {
-    // mongoose.connect(db);
-}
-app.use(bodyParser.urlencoded({ extended: false }));
-routes.addTo(router);
-app.use('/api', router);
-
 /* start-strip */
 var compiler = webpack(webpackConfig);
 
@@ -75,7 +67,28 @@ app.use(hotMiddleware);
 
 // serve pure static assets
 var staticPath = path.join(config.build.assetsPublicPath, config.build.assetsSubDirectory);
-app.use(staticPath, express.static('./static'));
+var staticFolder;
+if (process.env.NODE_ENV === 'release') {
+    staticFolder = path.join(__dirname, '../static');
+} else {
+    staticFolder = './static';
+}
+console.log(process.env.NODE_ENV);
+console.log(staticFolder);
+app.use(staticPath, express.static(staticFolder));
+
+// routing/api
+if (db) {
+    // mongoose.connect(db);
+}
+if (process.env.NODE_ENV === 'release') {
+    app.use('*', function(req, res) {
+        res.sendFile(path.join(__dirname, '../index.html'));
+    });
+}
+app.use(bodyParser.urlencoded({ extended: false }));
+routes.addTo(router);
+app.use('/api', router);
 
 module.exports = app.listen(port, function (err) {
   if (err) {
