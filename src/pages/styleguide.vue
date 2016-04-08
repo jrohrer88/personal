@@ -36,27 +36,36 @@
 @mixin colorsStyleguide() {
     @each $name,
     $color in $colors {
-        .colorsStyleguide .#{$name} {
-            & .color {
-                background: color($name, base);
-                padding: 40px;
-                width: 100%;
-                box-sizing: border-box;
-                &:hover {
-                    background: color($name, dark);
+        .colorsStyleguide {
+            list-style-type: none;
+            list-style-position: outside;
+            & .#{$name} {
+                padding-left: 0px;
+                margin: 0;
+                &:before {
+                    content: "";
                 }
-            }
-            & .colorName {
-                &:after {
-                    content: '' + $name + '';
+                & .color {
+                    background: color($name, base);
+                    padding: 40px;
+                    width: 100%;
+                    box-sizing: border-box;
+                    &:hover {
+                        background: color($name, dark);
+                    }
                 }
-            }
-            & .colorHex {
-                background: #ffffff;
-                text-align: center;
-                padding: 10px 0;
-                &:after {
-                    content: '' + color($name, base) + '';
+                & .colorName {
+                    &:after {
+                        content: '' + $name + '';
+                    }
+                }
+                & .colorHex {
+                    background: #ffffff;
+                    text-align: center;
+                    padding: 10px 0;
+                    &:after {
+                        content: '' + color($name, base) + '';
+                    }
                 }
             }
         }
@@ -183,7 +192,8 @@
             <hr>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed urna sed neque blandit gravida vitae bibendum dictum, nisl nisi.</p>
 
-            <span>Bold</span> <span>Italic</span> <a href="#">Hyperlink </a>
+            <p><span class="bold">Bold</span> <span class="italic">Italic</span> <a href="#">Hyperlink</a></p>
+
             <ul>
                 <li>Unordered list</li>
                 <li>Unordered list</li>
@@ -204,6 +214,123 @@
             <h6>h6. Bootstrap heading</h6>
         </div>
     </div>
+
+    <div class="row">
+        <h2>03 Buttons &amp; Links</h2>
+        <hr>
+        <div class="col-md-4">
+            <div class="col-md-4">
+                <div class="primary1-button">Button</div>
+                <div class="primary2-button">Button</div>
+                <div class="primary3-button">Button</div>
+            </div>
+            <div class="col-md-4">
+                <div class="primary5-button">Button</div>
+                <div class="primary6-button">Button</div>
+                <div class="primary7-button">Button</div>
+            </div>
+            <div class="col-md-4">
+                <div class="accent1-button">Button</div>
+                <div class="accent2-button">Button</div>
+                <div class="accent3-button">Button</div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+
+        </div>
+
+    </div>
+
+    <div class="row">
+        <h2>04 Forms</h2>
+        <hr>
+        <div class="col-md-4">
+
+            <div class="well">
+                <input type="text" value="Disabled" disabled>
+                <input type="text" value="Plain Input">
+                <input type="text" class="error" value="Error Input">
+                <input type="text" class="success" value="Success Input">
+                <input type="text" value="Input w/ Icon">
+                <input type="text" value="Input w/ icon and button">
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="row">
+
+
+        <div class="col-md-8">
+            <h2>05 Tables</h2>
+            <hr>
+
+        </div>
+        <div class="col-md-4">
+            <h2>06 Alerts</h2>
+            <hr>
+
+            <div class="alert">
+                <div class="col-md-10">
+                    Information displayed to user. LorLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua.
+                </div>
+                <div class="col-md-2">
+                    <div class="close">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="alert note">
+                <div class="col-md-10">
+                    Information displayed to user. LorLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua.
+                </div>
+                <div class="col-md-2">
+                    <div class="close">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="alert error">
+                <div class="col-md-10">
+                    Information displayed to user. LorLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua.
+                </div>
+                <div class="col-md-2">
+                    <div class="close">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="alert warning">
+                <div class="col-md-10">
+                    Information displayed to user. LorLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua.
+                </div>
+                <div class="col-md-2">
+                    <div class="close">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="alert success">
+                <div class="col-md-10">
+                    Information displayed to user. LorLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua.
+                </div>
+                <div class="col-md-2">
+                    <div class="close">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
 
 </div>
 

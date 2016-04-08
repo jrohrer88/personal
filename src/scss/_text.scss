@@ -10,6 +10,7 @@
         font-weight:$weight;
     }
 
+// Basic Text Elements
 h1{
   @include font(3em ,$secondary-font-family, 300);
 }
@@ -36,8 +37,23 @@ h6{
 
 p{
   @include font(.875em ,$secondary-font-family, 300);
+  margin: 1em 0;
 }
 
+a{
+  @include font(inherit ,$font-family, 300);
+  color: color(primary6, base);
+  text-decoration: underline;
+  &:hover{
+    color: color(primary6, dark);
+  }
+}
+
+span{
+  @include font(inherit ,$font-family, 300);
+}
+
+// Basic Text Styling
 .light{
   font-weight: 300;
 }
@@ -56,4 +72,32 @@ p{
 
 .condensed{
   font-family: $secondary-font-family;
+}
+
+// Extra Text Elements
+ul, ol{
+  margin: 15px 0;
+  @include font(inherit ,$font-family, 300);
+}
+
+ul{
+  & li:before {
+            content: "\2022 ";
+            color: color(primary6, base);
+        }
+}
+
+ol{
+  counter-reset: item;
+  & li:before {
+            content: counter(item) ". ";
+            counter-increment: item;
+            color: color(primary6, base);
+        }
+}
+
+li{
+  padding-left: 20px;
+  margin: 5px 0;
+  list-style-position: inside;
 }

@@ -3,19 +3,24 @@
         @each $name, $color in $colors{
             .#{$name}-button{
               background: color($name, base);
-              border-radius: 100px ;
+              border-radius: 5px ;
               text-align: center;
-              border: none;
-              //color: color(white, base);
+              border: 3px solid rgba(0,0,0,0);
+              color: color(secondary2, base);
               padding: 10px 20px;
               margin: 20px auto;
-              //@include font(1.66em, $font-family);
+              @include font(1em, $font-family, 300);
               display: block;
-              font-weight: 500;
-              float: none;
+              width: 100%;
+              box-sizing: border-box;
               &:hover{
                  background: color($name, dark);
                   cursor: pointer;
+              }
+              &:active{
+                background: none;
+                color: color($name, base);
+                border: 3px solid color($name, base);
               }
             }
         }
