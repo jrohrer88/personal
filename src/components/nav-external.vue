@@ -13,6 +13,9 @@
             <li v-link-active>
                 <a v-link="{ name: 'styleguide'}">Style Guide</a>
             </li>
+            <li v-link-active>
+                <a v-link="{ name: 'login'}">Login</a>
+            </li>
         </ul>
     </nav>
 </template>
