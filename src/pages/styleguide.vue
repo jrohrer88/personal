@@ -268,63 +268,178 @@
             <h2>05 Tables</h2>
             <hr>
 
+            <div class="table">
+              <div class="titleBar">
+                <h2>Leads List</h2>
+              </div>
+              <div class="headings col-md-12 hide-md">
+                <div class="col-md-2 no-pad primaryInfo">
+                  <div class="col-xs-3">
+                    <input type="checkbox">
+                  </div>
+                  <div class="col-xs-9">
+                    Name
+                  </div>
+                </div>
+                <div class="col-md-10 secondaryInfo no-pad hide-md">
+                  <div class="col-md-3">
+                    Email Address
+                  </div>
+                  <div class="col-md-3">
+                    Street Address
+                  </div>
+                  <div class="col-md-2">
+                    City
+                  </div>
+                  <div class="col-md-1">
+                    State
+                  </div>
+                  <div class="col-md-1">
+                    Zip
+                  </div>
+                  <div class="col-md-2">
+                      Phone Number
+                  </div>
+                </div>
+              </div>
+              <div class="tRows">
+                <div class="tRow col-md-12">
+                  <div class="col-md-2 no-pad primaryInfo">
+                    <div class="col-xs-3">
+                      <input type="checkbox">
+                    </div>
+                    <div class="col-xs-9">
+                      Carl Grimes
+                    </div>
+                  </div>
+                  <div class="col-md-10 secondaryInfo no-pad hide-md">
+                    <div class="col-md-3">
+                      1eyedcarl@walking.com
+                    </div>
+                    <div class="col-md-3">
+                      123 Zombie Lane
+                    </div>
+                    <div class="col-md-2">
+                      Columbus
+                    </div>
+                    <div class="col-md-1">
+                      Georgia
+                    </div>
+                    <div class="col-md-1">
+                      30012
+                    </div>
+                    <div class="col-md-2">
+                      	(555) 222-2222
+                    </div>
+                  </div>
+                </div>
+
+                <div class="tRow col-md-12">
+                  <div class="col-md-2 no-pad primaryInfo">
+                    <div class="col-xs-3">
+                      <input type="checkbox">
+                    </div>
+                    <div class="col-xs-9">
+                      Carl Grimes
+                    </div>
+                  </div>
+                  <div class="col-md-10 secondaryInfo no-pad hide-md">
+                    <div class="col-md-3">
+                      1eyedcarl@walking.com
+                    </div>
+                    <div class="col-md-3">
+                      123 Zombie Lane
+                    </div>
+                    <div class="col-md-2">
+                      Columbus
+                    </div>
+                    <div class="col-md-1">
+                      Georgia
+                    </div>
+                    <div class="col-md-1">
+                      30012
+                    </div>
+                    <div class="col-md-2">
+                      	(555) 222-2222
+                    </div>
+                  </div>
+                </div>
+
+                <div class="tRow col-md-12">
+                  <div class="col-md-2 no-pad primaryInfo">
+                    <div class="col-xs-3">
+                      <input type="checkbox">
+                    </div>
+                    <div class="col-xs-9">
+                      Carl Grimes
+                    </div>
+                  </div>
+                  <div class="col-md-10 secondaryInfo no-pad hide-md">
+                    <div class="col-md-3">
+                      1eyedcarl@walking.com
+                    </div>
+                    <div class="col-md-3">
+                      123 Zombie Lane
+                    </div>
+                    <div class="col-md-2">
+                      Columbus
+                    </div>
+                    <div class="col-md-1">
+                      Georgia
+                    </div>
+                    <div class="col-md-1">
+                      30012
+                    </div>
+                    <div class="col-md-2">
+                      	(555) 222-2222
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
         </div>
         <div class="col-md-4">
             <h2>06 Alerts</h2>
             <hr>
 
             <div class="alert">
-                <div class="col-md-10">
+                <div class="col-xs-10">
                     Information displayed to user. LorLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua.
                 </div>
-                <div class="col-md-2">
-                    <div class="close">
-                    </div>
-                </div>
+                    <div class="close"></div>
             </div>
 
 
             <div class="alert note">
-                <div class="col-md-10">
-                    Information displayed to user. LorLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua.
-                </div>
-                <div class="col-md-2">
-                    <div class="close">
-                    </div>
-                </div>
+              <div class="col-xs-10">
+                  Information displayed to user. LorLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua.
+              </div>
+                  <div class="close"></div>
             </div>
 
 
             <div class="alert error">
-                <div class="col-md-10">
-                    Information displayed to user. LorLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua.
-                </div>
-                <div class="col-md-2">
-                    <div class="close">
-                    </div>
-                </div>
+              <div class="col-xs-10">
+                  Information displayed to user. LorLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua.
+              </div>
+                  <div class="close"></div>
             </div>
 
 
             <div class="alert warning">
-                <div class="col-md-10">
-                    Information displayed to user. LorLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua.
-                </div>
-                <div class="col-md-2">
-                    <div class="close">
-                    </div>
-                </div>
+              <div class="col-xs-10">
+                  Information displayed to user. LorLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua.
+              </div>
+                  <div class="close"></div>
             </div>
 
 
             <div class="alert success">
-                <div class="col-md-10">
-                    Information displayed to user. LorLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua.
-                </div>
-                <div class="col-md-2">
-                    <div class="close">
-                    </div>
-                </div>
+              <div class="col-xs-10">
+                  Information displayed to user. LorLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua.
+              </div>
+                  <div class="close"></div>
             </div>
 
         </div>
