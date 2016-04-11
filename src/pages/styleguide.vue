@@ -77,11 +77,31 @@
 </style>
 
 <script>
-    import dropDown from './components/drop-down.vue';
+    import dropDown from '../components/drop-down.vue';
 
     export default {
         components: {
             dropDown
+        },
+        data: function() {
+          return {
+            months: [
+              'January',
+              'Febuary',
+              'March',
+              'April',
+              'May',
+              'June',
+              'July',
+              'August',
+              'September'
+            ],
+            countries: [
+              'United States',
+              'Egypt',
+              'Austrialia'
+            ]
+          }
         }
     }
 </script>
@@ -268,8 +288,22 @@
 
         </div>
 
-        <div class="col-md-4">
-            <drop-down></drop-down>
+        <div class="col-md-3">
+          <label>Date of Birth</label>
+          <div class="col-md-5">
+            <drop-down :options="months"></drop-down>
+          </div>
+          <div class="col-md-3">
+            <input type="text" placeholder="Day">
+          </div>
+          <div class="col-md-4">
+            <input type="text" placeholder="Year">
+          </div>
+
+          <label>Country</label>
+          <div class="col-md-12">
+            <drop-down :options="countries"></drop-down>
+          </div>
         </div>
 
     </div>

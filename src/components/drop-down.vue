@@ -1,45 +1,59 @@
 <style lang="scss">
-
+@import "../scss/_logic.scss";
 .highlight {
     background-color: grey;
 }
 
 .drop-down {
-    width: 15em;
-    input {
+    width: 100%;
+    position:relative;
+    & input {
         margin-bottom: 0;
-        border-radius: 0;
+        border-radius: 7px;
+        color: color(secondary5, base);
         &:hover {
             cursor: pointer;
         }
     }
-    ul {
+    & ul {
+      position:absolute;
         box-sizing: border-box;
-        border: .15em solid #ddd;
-        margin: 0;
-        padding: 0;
-        background-color: #eee;
+        margin-top: 5px;
+        padding: 5px;
+        background-color: color(secondary3, dark);
         overflow-y: scroll;
         overflow-x: hidden;
-        li {
+        border-radius: 7px;
+        background: color(secondary3, base);
+        color: color(secondary3, dark);
+        width: 100%;
+        z-index: 1000;
+        & li {
             margin: 0;
-            border-bottom: .15em solid #ddd;
-            padding: .25em 0;
+            border-bottom: 1px solid color(secondary3, dark);
+            padding: .6em 0;
+            text-align: center;
+            color: color(secondary5, base);
             &:before {
                 content: "";
             }
+            &:last-child {
+              border-bottom: none;
+            }
+            &:hover{
+              background: color(secondary3, dark);
+              cursor: pointer;
+            }
+            &.highlight{
+              background: color(secondary3, dark);
+            }
         }
-    }
-    a {
-        text-align: center;
-        display: block;
     }
 }
 
 .expand-transition {
     transition: all .3s ease;
-    background-color: #eee;
-    max-height: 10em;
+    height: 250px;
 }
 
 .expand-enter,
@@ -55,8 +69,8 @@
 <div class="drop-down">
     <input type="text" readonly="true" value="{{currentValue}}" @click="listVisible = !listVisible">
     <ul class="options" v-show="listVisible" transition="expand">
-        <li :class="{highlight: currentValue === option}" v-for="option in options">
-            <a @click="setOption(option, $index)" href="#">{{option}}</a>
+        <li :class="{highlight: currentValue === option}" v-for="option in options" @click="setOption(option, $index)">
+            {{option}}
         </li>
     </ul>
 </div>
