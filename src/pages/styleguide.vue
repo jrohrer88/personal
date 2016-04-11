@@ -76,6 +76,16 @@
 
 </style>
 
+<script>
+    import dropDown from './components/drop-down.vue';
+
+    export default {
+        components: {
+            dropDown
+        }
+    }
+</script>
+
 <template>
 
 <div class="inner-wrapper">
@@ -258,6 +268,10 @@
 
         </div>
 
+        <div class="col-md-4">
+            <drop-down></drop-down>
+        </div>
+
     </div>
 
 
@@ -405,7 +419,7 @@
 
             <div class="alert">
                 <div class="col-xs-10">
-                    Information displayed to user. LorLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua.
+                    <p>Information displayed to user. LorLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua.</p>
                 </div>
                     <div class="close"></div>
             </div>
@@ -413,7 +427,7 @@
 
             <div class="alert note">
               <div class="col-xs-10">
-                  Information displayed to user. LorLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua.
+                  <p><span class="bold">Note!</span> Information displayed to user. LorLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua.</p>
               </div>
                   <div class="close"></div>
             </div>
@@ -421,7 +435,7 @@
 
             <div class="alert error">
               <div class="col-xs-10">
-                  Information displayed to user. LorLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua.
+                  <p><span class="bold">Error!</span> Information displayed to user. LorLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua.</p>
               </div>
                   <div class="close"></div>
             </div>
@@ -429,7 +443,7 @@
 
             <div class="alert warning">
               <div class="col-xs-10">
-                  Information displayed to user. LorLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua.
+                  <p><span class="bold">Warning!</span> Information displayed to user. LorLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua.</p>
               </div>
                   <div class="close"></div>
             </div>
@@ -437,7 +451,7 @@
 
             <div class="alert success">
               <div class="col-xs-10">
-                  Information displayed to user. LorLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua.
+                  <p><span class="bold">Success!</span> Information displayed to user. LorLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua.</p>
               </div>
                   <div class="close"></div>
             </div>
