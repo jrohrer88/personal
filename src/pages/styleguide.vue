@@ -276,6 +276,8 @@
         <h2>04 Forms</h2>
         <hr>
         <div class="col-md-4">
+          <h2>Input Fields</h2>
+          <hr >
 
             <div class="well">
                 <input type="text" value="Disabled" disabled>
@@ -289,6 +291,10 @@
         </div>
 
         <div class="col-md-3">
+
+          <h2>Form Formatting</h2>
+          <hr >
+
           <label>Date of Birth</label>
           <div class="col-md-5">
             <drop-down :options="months"></drop-down>
@@ -305,6 +311,29 @@
             <drop-down :options="countries"></drop-down>
           </div>
         </div>
+
+<div class="col-md-3">
+        <h2>Checkboxes</h2>
+        <hr >
+        <!-- Squared THREE -->
+        <div class="checkboxOne">
+	         <input type="checkbox" value="None" id="checkboxOne" name="check" />
+	          <label for="checkboxOne"></label>
+          </div>
+
+          <!-- Slide TWO -->
+          <div class="col-md-3">
+
+            <div class="toggleSwitch">
+              <input type="checkbox" value="None" id="toggleSwitchOne" name="check" />
+              <div class="toggleSwitchWrap">
+	               <label for="toggleSwitchOne"></label>
+              </div>
+            </div>
+          </div>
+
+
+</div>
 
     </div>
 
@@ -323,7 +352,10 @@
               <div class="headings col-md-12 hide-md">
                 <div class="col-md-2 no-pad primaryInfo">
                   <div class="col-xs-3">
-                    <input type="checkbox">
+                    <div class="checkboxOne">
+            	         <input type="checkbox" value="None" id="checkbox1" name="check" />
+            	          <label for="checkbox1"></label>
+                      </div>
                   </div>
                   <div class="col-xs-9">
                     Name
@@ -354,7 +386,10 @@
                 <div class="tRow col-md-12">
                   <div class="col-md-2 no-pad primaryInfo">
                     <div class="col-xs-3">
-                      <input type="checkbox">
+                      <div class="checkboxOne">
+                        <input type="checkbox" value="None" id="checkbox2" name="check" />
+                         <label for="checkbox2"></label>
+                        </div>
                     </div>
                     <div class="col-xs-9">
                       Carl Grimes
@@ -385,7 +420,10 @@
                 <div class="tRow col-md-12">
                   <div class="col-md-2 no-pad primaryInfo">
                     <div class="col-xs-3">
-                      <input type="checkbox">
+                      <div class="checkboxOne">
+                        <input type="checkbox" value="None" id="checkbox3" name="check" />
+                         <label for="checkbox3"></label>
+                        </div>
                     </div>
                     <div class="col-xs-9">
                       Carl Grimes
@@ -416,7 +454,10 @@
                 <div class="tRow col-md-12">
                   <div class="col-md-2 no-pad primaryInfo">
                     <div class="col-xs-3">
-                      <input type="checkbox">
+                      <div class="checkboxOne">
+                        <input type="checkbox" value="None" id="checkbox4" name="check" />
+                         <label for="checkbox4"></label>
+                        </div>
                     </div>
                     <div class="col-xs-9">
                       Carl Grimes

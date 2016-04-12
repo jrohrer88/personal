@@ -30,3 +30,105 @@ label{
   @include font(1em, $font-family, 300);
   margin: 0px 5px ;
 }
+
+
+.checkboxOne {
+	width: 20px;
+	position: relative;
+  & input[type=checkbox]:checked + label{
+    background: color(accent2,base);
+    &:after {
+      opacity: 1;
+      border-color: #ffffff;
+    }
+  }
+  & label {
+  	cursor: pointer;
+  	position: absolute;
+  	width: 1.2em;
+  	height: 1.2em;
+  	top: 0;
+  	border-radius: 4px;
+    border: 2px solid color(secondary1, base);
+  	background: #ffffff;
+    &:after {
+    	opacity: 0;
+    	content: '';
+    	position: absolute;
+    	width: .5em;
+    	height: .3em;
+    	background: transparent;
+    	top: .25em;
+    	left: .25em;
+    	border: 3px solid #000000;
+    	border-top: none;
+    	border-right: none;
+
+    	-webkit-transform: rotate(-45deg);
+    	-moz-transform: rotate(-45deg);
+    	-o-transform: rotate(-45deg);
+    	-ms-transform: rotate(-45deg);
+    	transform: rotate(-45deg);
+    }
+    &:hover::after {
+    	opacity: 0.3;
+    }
+  }
+}
+
+
+
+.toggleSwitch {
+  & .toggleSwitchWrap{
+    width: 100%;
+  	height: 30px;
+  	background: color(accent1, base);
+  	margin: 20px auto;
+  	-webkit-border-radius: 5px;
+  	-moz-border-radius: 5px;
+  	border-radius: 5px;
+  	position: relative;
+    & label {
+    	display: block;
+    	width: 22px;
+    	height: 22px;
+      margin: 0;
+    	-webkit-border-radius: 5px;
+    	-moz-border-radius: 5px;
+    	border-radius: 5px;
+    	-webkit-transition: all .4s ease;
+    	-moz-transition: all .4s ease;
+    	-o-transition: all .4s ease;
+    	-ms-transition: all .4s ease;
+    	transition: all .4s ease;
+    	cursor: pointer;
+    	position: absolute;
+    	top: 4px;
+    	z-index: 1;
+      left: 4px;
+    	background: color(secondary3, base);
+    }
+    &:after {
+      content: "Off";
+      right: 4px;
+      position: absolute;
+      top: 6px;
+      color: color(secondary3,base);
+    }
+  }
+  & input{
+    display: none;
+    &[type=checkbox]:checked + .toggleSwitchWrap {
+    	background: color(accent2, base);
+      & label {
+        left: calc(100% - 26px);
+      }
+      &:after {
+        content: "On";
+        left: 4px;
+        position: absolute;
+        color: color(secondary3,base);
+      }
+    }
+  }
+}
