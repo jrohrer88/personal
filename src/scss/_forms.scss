@@ -7,22 +7,62 @@ input {
   box-sizing: border-box;
   color: color(secondary5, dark);
   &[type='text'] {
-      margin: 10px 0;
     &:disabled {
       background: #dddddd;
       color: color(secondary2, dark);
     }
   }
-  &.error {
-    border-color: color(accent1, base);
-  }
-  &.success {
-    border-color: color(accent3, base);
-  }
   &:focus {
     outline: none;
   }
 }
+
+.field{
+  margin: 15px 0;
+  position: relative;
+}
+.error {
+  & input{
+    border-color: color(accent1, base);
+  }
+}
+.success {
+  & input{
+    border-color: color(accent3, base);
+  }
+}
+
+.withButton {
+  & input{
+    width: 80%;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: none;
+    float: left;
+    box-sizing: border-box;
+  }
+  & .button{
+    width: 20%;
+    background: color(primary6,base);
+    box-sizing: border-box;
+    height: 100%;
+    position: absolute;
+    right: 10px;
+    color: color(secondary3, base);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    text-align: center;
+    padding-top: 2.7%;
+    &:hover{
+      background: color(primary6,dark);
+      cursor: pointer;
+    }
+  }
+}
+
+
+
+
 
 label{
   width: 100%;
@@ -33,8 +73,9 @@ label{
 
 
 .checkboxOne {
-	width: 20px;
+	width: 30px;
 	position: relative;
+  float: left;
   & input[type=checkbox]:checked + label{
     background: color(accent2,base);
     &:after {
@@ -45,20 +86,21 @@ label{
   & label {
   	cursor: pointer;
   	position: absolute;
-  	width: 1.2em;
-  	height: 1.2em;
+  	width: 30px;
+  	height: 30px;
   	top: 0;
   	border-radius: 4px;
     border: 2px solid color(secondary1, base);
   	background: #ffffff;
+    box-sizing: border-box;
     &:after {
     	opacity: 0;
     	content: '';
     	position: absolute;
-    	width: .5em;
-    	height: .3em;
+    	width: 15px;
+    	height: 5px;
     	background: transparent;
-    	top: .25em;
+    	top: 7px;
     	left: .25em;
     	border: 3px solid #000000;
     	border-top: none;
@@ -83,7 +125,7 @@ label{
     width: 100%;
   	height: 30px;
   	background: color(accent1, base);
-  	margin: 20px auto;
+  	margin: 0px auto;
   	-webkit-border-radius: 5px;
   	-moz-border-radius: 5px;
   	border-radius: 5px;
@@ -131,4 +173,10 @@ label{
       }
     }
   }
+}
+
+.formRow{
+    width: 100%;
+    float: left;
+    margin: 10px 0;
 }

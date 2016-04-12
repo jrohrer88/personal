@@ -8,6 +8,9 @@
     & li {
         float: left;
         margin: 10px 0;
+        @media only screen and (max-width: 900px) {
+            width: 33%!important;
+        };
     }
     &.primary {
         width: 46.67%;
@@ -27,6 +30,9 @@
             width: 33.33%;
         }
     }
+    @media only screen and (max-width: 900px) {
+        width: 100%!important;
+    };
 }
 
 .textEx {
@@ -280,12 +286,25 @@
           <hr >
 
             <div class="well">
+              <div class="disabled field col-md-12">
                 <input type="text" value="Disabled" disabled>
+              </div>
+              <div class="plain field col-md-12">
                 <input type="text" value="Plain Input">
+              </div>
+              <div class="error field col-md-12">
                 <input type="text" class="error" value="Error Input">
+              </div>
+              <div class="success field col-md-12">
                 <input type="text" class="success" value="Success Input">
+              </div>
+              <div class="icon field col-md-12">
                 <input type="text" value="Input w/ Icon">
+              </div>
+              <div class="withButton field col-md-12 ">
                 <input type="text" value="Input w/ icon and button">
+                <div class="button">Click</div>
+              </div>
             </div>
 
         </div>
@@ -294,43 +313,44 @@
 
           <h2>Form Formatting</h2>
           <hr >
-
+<div class="formRow">
           <label>Date of Birth</label>
-          <div class="col-md-5">
+          <div class="col-xs-5 field">
             <drop-down :options="months"></drop-down>
           </div>
-          <div class="col-md-3">
-            <input type="text" placeholder="Day">
+          <div class="col-xs-3 disabled field">
+            <input type="text" placeholder="Day" disabled>
           </div>
-          <div class="col-md-4">
+          <div class="col-xs-4 field">
             <input type="text" placeholder="Year">
           </div>
-
+</div>
+<div class="formRow">
           <label>Country</label>
-          <div class="col-md-12">
+          <div class="col-md-12 field">
             <drop-down :options="countries"></drop-down>
           </div>
         </div>
+</div>
 
 <div class="col-md-3">
         <h2>Checkboxes</h2>
         <hr >
-        <!-- Squared THREE -->
-        <div class="checkboxOne">
-	         <input type="checkbox" value="None" id="checkboxOne" name="check" />
+        <div class="col-md-3">
+          <div class="checkboxOne">
+	          <input type="checkbox" value="None" id="checkboxOne" name="check" />
 	          <label for="checkboxOne"></label>
           </div>
+        </div>
 
-          <!-- Slide TWO -->
-          <div class="col-md-3">
-
-            <div class="toggleSwitch">
-              <input type="checkbox" value="None" id="toggleSwitchOne" name="check" />
-              <div class="toggleSwitchWrap">
-	               <label for="toggleSwitchOne"></label>
-              </div>
+        <div class="col-md-3">
+          <div class="toggleSwitch">
+            <input type="checkbox" value="None" id="toggleSwitchOne" name="check" />
+            <div class="toggleSwitchWrap">
+	             <label for="toggleSwitchOne"></label>
             </div>
           </div>
+        </div>
 
 
 </div>

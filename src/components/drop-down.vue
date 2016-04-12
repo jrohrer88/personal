@@ -12,7 +12,7 @@
       &:after{
         content: "\25bc";
         position: absolute;
-        top: 40%;
+        top: 28%;
         right: 10px;
         background: color(secondary3, base);
         color: color(secondary5, base);
