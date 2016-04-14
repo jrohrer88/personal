@@ -5,6 +5,7 @@
 @import "_buttons.scss";
 @import "_forms.scss";
 @import "_alerts.scss";
+@import "_tables.scss";
 
 body{
     //font-family: $font-family;
@@ -33,4 +34,8 @@ hr{
       border-style: solid;
       border-left: none;
       border-right: none;
+}
+
+.no-pad{
+  padding: 0;
 }

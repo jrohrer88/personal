@@ -8,6 +8,9 @@
     & li {
         float: left;
         margin: 10px 0;
+        @media only screen and (max-width: 900px) {
+            width: 33%!important;
+        };
     }
     &.primary {
         width: 46.67%;
@@ -27,6 +30,9 @@
             width: 33.33%;
         }
     }
+    @media only screen and (max-width: 900px) {
+        width: 100%!important;
+    };
 }
 
 .textEx {
@@ -75,6 +81,36 @@
 @include colorsStyleguide();
 
 </style>
+
+<script>
+    import dropDown from '../components/drop-down.vue';
+
+    export default {
+        components: {
+            dropDown
+        },
+        data: function() {
+          return {
+            months: [
+              'January',
+              'Febuary',
+              'March',
+              'April',
+              'May',
+              'June',
+              'July',
+              'August',
+              'September'
+            ],
+            countries: [
+              'United States',
+              'Egypt',
+              'Austrialia'
+            ]
+          }
+        }
+    }
+</script>
 
 <template>
 
@@ -246,17 +282,78 @@
         <h2>04 Forms</h2>
         <hr>
         <div class="col-md-4">
+          <h2>Input Fields</h2>
+          <hr >
 
             <div class="well">
+              <div class="disabled field col-md-12">
                 <input type="text" value="Disabled" disabled>
+              </div>
+              <div class="plain field col-md-12">
                 <input type="text" value="Plain Input">
+              </div>
+              <div class="error field col-md-12">
                 <input type="text" class="error" value="Error Input">
+              </div>
+              <div class="success field col-md-12">
                 <input type="text" class="success" value="Success Input">
+              </div>
+              <div class="icon field col-md-12">
                 <input type="text" value="Input w/ Icon">
+              </div>
+              <div class="withButton field col-md-12 ">
                 <input type="text" value="Input w/ icon and button">
+                <div class="button">Click</div>
+              </div>
             </div>
 
         </div>
+
+        <div class="col-md-3">
+
+          <h2>Form Formatting</h2>
+          <hr >
+<div class="formRow">
+          <label>Date of Birth</label>
+          <div class="col-xs-5 field">
+            <drop-down :options="months"></drop-down>
+          </div>
+          <div class="col-xs-3 disabled field">
+            <input type="text" placeholder="Day" disabled>
+          </div>
+          <div class="col-xs-4 field">
+            <input type="text" placeholder="Year">
+          </div>
+</div>
+<div class="formRow">
+          <label>Country</label>
+          <div class="col-md-12 field">
+            <drop-down :options="countries"></drop-down>
+          </div>
+        </div>
+</div>
+
+<div class="col-md-3">
+        <h2>Checkboxes</h2>
+        <hr >
+        <div class="col-md-3">
+          <div class="checkboxOne">
+	          <input type="checkbox" value="None" id="checkboxOne" name="check" />
+	          <label for="checkboxOne"></label>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="toggleSwitch">
+            <input type="checkbox" value="None" id="toggleSwitchOne" name="check" />
+            <div class="toggleSwitchWrap">
+	             <label for="toggleSwitchOne"></label>
+            </div>
+          </div>
+        </div>
+
+
+</div>
 
     </div>
 
@@ -268,63 +365,190 @@
             <h2>05 Tables</h2>
             <hr>
 
+            <div class="table">
+              <div class="titleBar">
+                <h2>Leads List</h2>
+              </div>
+              <div class="headings col-md-12 hide-md">
+                <div class="col-md-2 no-pad primaryInfo">
+                  <div class="col-xs-3">
+                    <div class="checkboxOne">
+            	         <input type="checkbox" value="None" id="checkbox1" name="check" />
+            	          <label for="checkbox1"></label>
+                      </div>
+                  </div>
+                  <div class="col-xs-9">
+                    Name
+                  </div>
+                </div>
+                <div class="col-md-10 secondaryInfo no-pad hide-md">
+                  <div class="col-md-3">
+                    Email Address
+                  </div>
+                  <div class="col-md-3">
+                    Street Address
+                  </div>
+                  <div class="col-md-2">
+                    City
+                  </div>
+                  <div class="col-md-1">
+                    State
+                  </div>
+                  <div class="col-md-1">
+                    Zip
+                  </div>
+                  <div class="col-md-2">
+                      Phone Number
+                  </div>
+                </div>
+              </div>
+              <div class="tRows">
+                <div class="tRow col-md-12">
+                  <div class="col-md-2 no-pad primaryInfo">
+                    <div class="col-xs-3">
+                      <div class="checkboxOne">
+                        <input type="checkbox" value="None" id="checkbox2" name="check" />
+                         <label for="checkbox2"></label>
+                        </div>
+                    </div>
+                    <div class="col-xs-9">
+                      Carl Grimes
+                    </div>
+                  </div>
+                  <div class="col-md-10 secondaryInfo no-pad hide-md">
+                    <div class="col-md-3">
+                      1eyedcarl@walking.com
+                    </div>
+                    <div class="col-md-3">
+                      123 Zombie Lane
+                    </div>
+                    <div class="col-md-2">
+                      Columbus
+                    </div>
+                    <div class="col-md-1">
+                      Georgia
+                    </div>
+                    <div class="col-md-1">
+                      30012
+                    </div>
+                    <div class="col-md-2">
+                      	(555) 222-2222
+                    </div>
+                  </div>
+                </div>
+
+                <div class="tRow col-md-12">
+                  <div class="col-md-2 no-pad primaryInfo">
+                    <div class="col-xs-3">
+                      <div class="checkboxOne">
+                        <input type="checkbox" value="None" id="checkbox3" name="check" />
+                         <label for="checkbox3"></label>
+                        </div>
+                    </div>
+                    <div class="col-xs-9">
+                      Carl Grimes
+                    </div>
+                  </div>
+                  <div class="col-md-10 secondaryInfo no-pad hide-md">
+                    <div class="col-md-3">
+                      1eyedcarl@walking.com
+                    </div>
+                    <div class="col-md-3">
+                      123 Zombie Lane
+                    </div>
+                    <div class="col-md-2">
+                      Columbus
+                    </div>
+                    <div class="col-md-1">
+                      Georgia
+                    </div>
+                    <div class="col-md-1">
+                      30012
+                    </div>
+                    <div class="col-md-2">
+                      	(555) 222-2222
+                    </div>
+                  </div>
+                </div>
+
+                <div class="tRow col-md-12">
+                  <div class="col-md-2 no-pad primaryInfo">
+                    <div class="col-xs-3">
+                      <div class="checkboxOne">
+                        <input type="checkbox" value="None" id="checkbox4" name="check" />
+                         <label for="checkbox4"></label>
+                        </div>
+                    </div>
+                    <div class="col-xs-9">
+                      Carl Grimes
+                    </div>
+                  </div>
+                  <div class="col-md-10 secondaryInfo no-pad hide-md">
+                    <div class="col-md-3">
+                      1eyedcarl@walking.com
+                    </div>
+                    <div class="col-md-3">
+                      123 Zombie Lane
+                    </div>
+                    <div class="col-md-2">
+                      Columbus
+                    </div>
+                    <div class="col-md-1">
+                      Georgia
+                    </div>
+                    <div class="col-md-1">
+                      30012
+                    </div>
+                    <div class="col-md-2">
+                      	(555) 222-2222
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
         </div>
         <div class="col-md-4">
             <h2>06 Alerts</h2>
             <hr>
 
             <div class="alert">
-                <div class="col-md-10">
-                    Information displayed to user. LorLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua.
+                <div class="col-xs-10">
+                    <p>Information displayed to user. LorLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua.</p>
                 </div>
-                <div class="col-md-2">
-                    <div class="close">
-                    </div>
-                </div>
+                    <div class="close"></div>
             </div>
 
 
             <div class="alert note">
-                <div class="col-md-10">
-                    Information displayed to user. LorLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua.
-                </div>
-                <div class="col-md-2">
-                    <div class="close">
-                    </div>
-                </div>
+              <div class="col-xs-10">
+                  <p><span class="bold">Note!</span> Information displayed to user. LorLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua.</p>
+              </div>
+                  <div class="close"></div>
             </div>
 
 
             <div class="alert error">
-                <div class="col-md-10">
-                    Information displayed to user. LorLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua.
-                </div>
-                <div class="col-md-2">
-                    <div class="close">
-                    </div>
-                </div>
+              <div class="col-xs-10">
+                  <p><span class="bold">Error!</span> Information displayed to user. LorLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua.</p>
+              </div>
+                  <div class="close"></div>
             </div>
 
 
             <div class="alert warning">
-                <div class="col-md-10">
-                    Information displayed to user. LorLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua.
-                </div>
-                <div class="col-md-2">
-                    <div class="close">
-                    </div>
-                </div>
+              <div class="col-xs-10">
+                  <p><span class="bold">Warning!</span> Information displayed to user. LorLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua.</p>
+              </div>
+                  <div class="close"></div>
             </div>
 
 
             <div class="alert success">
-                <div class="col-md-10">
-                    Information displayed to user. LorLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua.
-                </div>
-                <div class="col-md-2">
-                    <div class="close">
-                    </div>
-                </div>
+              <div class="col-xs-10">
+                  <p><span class="bold">Success!</span> Information displayed to user. LorLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua.</p>
+              </div>
+                  <div class="close"></div>
             </div>
 
         </div>

@@ -7,8 +7,8 @@ $alerts: (
 
 
 
-.alert{
-  padding: 20px;
+.alert {
+  padding: 10px;
   border-radius: 5px;
   background: color(secondary3, base);
   border: 1px solid color(secondary3, dark);
@@ -20,29 +20,37 @@ $alerts: (
   width: 100%;
   box-sizing: border-box;
   float:left;
-  & .close{
+  position: relative;
+  & .close {
     background: color(secondary4, light);
-    padding: 3px 8px;
     color: #ffffff;
     border-radius: 5px;
     margin: 0 auto;
     display: block;
-    width: 20%;
-    &:after{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    right: 20px;
+    &:after {
           content: "X";
+          vertical-align: middle;
     }
-    &:hover{
+    &:hover {
       background: color(secondary4, base);
       cursor: pointer;
     }
   }
 }
 
-@mixin alertBoxes(){
+@mixin alertBoxes() {
         @each $alertName, $alertColor in $alerts{
           .alert.#{$alertName}{
             background: color($alertColor, light);
             border-color: color($alertColor, base);
+            color: darken(color($alertColor, dark), 10%);
           }
         }
       }
