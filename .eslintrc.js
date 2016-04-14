@@ -19,6 +19,8 @@ module.exports = {
     //space after function name
     'space-before-function-paren': ['off'],
     //multiple blank lines
-    'no-multiple-empty-lines': ['off']
+    'no-multiple-empty-lines': ['off'],
+    //extra binding
+    'no-extra-bind': ['off']
   }
 }

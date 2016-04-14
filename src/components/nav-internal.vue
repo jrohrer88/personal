@@ -2,6 +2,9 @@
 
 <nav>
     <ul>
+        <li>
+            <a @click="logOut">Logout</a>
+        </li>
         <li v-link-active>
             <a v-link="{ name: 'dash'}">Dashboard</a>
         </li>
@@ -21,11 +24,18 @@
 </template>
 
 <script>
+    import {userSignedOut} from '../vuex/actions';
+
     export default {
         data: function () {
             return {
                 showOptions: false
             };
+        },
+        vuex: {
+            actions: {
+                logOut: userSignedOut
+            }
         }
     }
 </script>

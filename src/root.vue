@@ -1,16 +1,29 @@
 <template>
-    <nav-external></nav-external>
+    <navigation></navigation>
     <router-view></router-view>
 </template>
 
 <script>
-    import navExternal from './components/nav-external.vue';
+    import navigation from './components/navigation';
+    import store from './vuex/store';
+    import {userSignedIn, userSignedOut} from './vuex/actions';
+    import {getLoginStatus} from './vuex/getters';
 
     export default {
         replace: false,
         components: {
-            navExternal
-        }
+            navigation
+        },
+        vuex: {
+            actions: {
+                userSignedIn: userSignedIn,
+                userSignedOut: userSignedOut
+            },
+            getters: {
+                isLoggedIn: getLoginStatus
+            }
+        },
+        store: store
     }
 </script>
 

@@ -2,6 +2,7 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import Resource from 'vue-resource';
+import Vuex from 'vuex';
 
 // Vue's
 import Root from './root';
@@ -13,6 +14,7 @@ import Dashboard from './pages/dashboard';
 import Picblend from './pages/picblend';
 import NotFound from './pages/404';
 import Login from './pages/login';
+import Register from './pages/register';
 
 // libraries
 import draggable from './js/directives/draggable';
@@ -23,12 +25,15 @@ Vue.config.debug = true;
 // App code
 Vue.use(Resource);
 Vue.use(Router);
+Vue.use(Vuex);
 
 let router = new Router({
     hashbang: false,
     history: true,
     linkActiveClass: 'active'
 });
+
+export default router;
 
 router.mode = 'html5';
 
@@ -64,6 +69,10 @@ router.map({
             name: 'login',
             component: Login
     },
+    '/register': {
+        name: 'register',
+        component: Register
+    },
     '/404': {
         name: '404',
         component: NotFound
@@ -74,7 +83,7 @@ router.redirect({
     '*': '/404'
 });
 
-auth(router);
+auth(router, Vue);
 draggable(Vue);
 
 router.start(Root, 'body');

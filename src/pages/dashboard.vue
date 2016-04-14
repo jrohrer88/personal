@@ -1,6 +1,5 @@
 <template>
     <h1>Dashboard</h1>
-    <nav-internal></nav-internal>
     <router-view></router-view>
 </template>
 
