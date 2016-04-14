@@ -1,7 +1,7 @@
 {
-  "name": "project-edwards",
+  "name": "vue-express",
   "version": "0.1.0",
-  "description": "MLM project for Tim Edwards",
+  "description": "A Vue.js and Express starter template based on the vue-cli webpack template. It utilizes vue-router, vue-resource, and vuex",
   "author": "Victor Rodriguez, Jeff Rohrer",
   "private": true,
   "scripts": {

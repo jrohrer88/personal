@@ -1,6 +1,6 @@
-# project-edwards
+# vue-express
 
-> MLM project for Tim Edwards
+> A Vue.js and Express starter template based on the vue-cli webpack template. It utilizes vue-router, vue-resource, and vuex
 
 ## Build Setup
 

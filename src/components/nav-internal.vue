@@ -9,13 +9,13 @@
             <a v-link="{ name: 'dash'}">Dashboard</a>
         </li>
         <li v-link-active>
-            <a @click="showOptions = !showOptions">Create</a>
+            <a @click="showOptions = !showOptions">Drop Down</a>
         </li>
         <div v-show="showOptions">
             <ul>
-                <li><a>FaceBook Ad</a></li>
-                <li><a>Twitter Ad</a></li>
-                <li><a v-link="{ name: 'picblend'}">Ad Builder</a></li>
+                <li><a>Link 1</a></li>
+                <li><a>Link 2</a></li>
+                <li><a v-link="{ name: 'subRoute'}">Sub Route</a></li>
             </ul>
         </div>
     </ul>

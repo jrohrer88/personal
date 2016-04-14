@@ -115,7 +115,7 @@
 <template>
 
 <div class="inner-wrapper">
-    <h1>Project Edwards - Style Guide</h1>
+    <h1>Style Guide</h1>
 
     <div class="row">
         <h2>01 Color Palettes</h2>

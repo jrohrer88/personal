@@ -1,3 +1,3 @@
 <template>
-    <h1>Picblend</h1>
+    <h1>Sub Route</h1>
 </template>

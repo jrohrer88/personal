@@ -11,7 +11,7 @@ import About from './pages/about';
 import Contact from './pages/contact';
 import Styleguide from './pages/styleguide';
 import Dashboard from './pages/dashboard';
-import Picblend from './pages/picblend';
+import SubRoute from './pages/subRoute';
 import NotFound from './pages/404';
 import Login from './pages/login';
 import Register from './pages/register';
@@ -58,9 +58,9 @@ router.map({
         name: 'dash',
         component: Dashboard,
         subRoutes: {
-            '/picblend': {
-                name: 'picblend',
-                component: Picblend
+            '/sub-route': {
+                name: 'sub-route',
+                component: SubRoute
             }
         },
         auth: true

@@ -1,6 +1,6 @@
 // check authorization
-const API_URL = 'http://development.local:4000/';
-const USER_URL = API_URL + 'App/User/';
+const API_URL = 'http://localhost:4000/';
+const USER_URL = API_URL + 'api/auth/';
 
 function addAuth(router, Vue) {
     // check auth routes
