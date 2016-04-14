@@ -7,9 +7,15 @@
         <alert :classes="'alert success'" :data-list="successMessage" :trigger-alert.sync="didSucceed"></alert>
 
         <form>
-            <input :class="{error: formErrors.email}" type="email" placeholder="email" v-model="email">
-            <input :class="{error: formErrors.password}" type="password" placeholder="password" v-model="password">
-            <input :class="{error: formErrors.password}" type="password" placeholder="password" v-model="passwordVerify">
+            <div class="field">
+                <input :class="{error: formErrors.email}" type="email" placeholder="email" v-model="email">
+            </div>
+            <div class="field">
+                <input :class="{error: formErrors.password}" type="password" placeholder="password" v-model="password">
+            </div>
+            <div class="field">
+                <input :class="{error: formErrors.password}" type="password" placeholder="password" v-model="passwordVerify">
+            </div>
             <div class="col-md-4">
                 <div class="accent2-button" @click="register">Submit</div>
             </div>

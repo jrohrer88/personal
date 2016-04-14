@@ -6,8 +6,12 @@
         <alert :classes="'alert error'" :data-list="formErrors" :trigger-alert.sync="hasErrors"></alert>
 
         <form>
-            <input :class="{error: formErrors.email}" type="email" placeholder="email" v-model="email">
-            <input :class="{error: formErrors.password}" type="password" placeholder="password" v-model="password">
+            <div class="field">
+                <input :class="{error: formErrors.email}" type="email" placeholder="email" v-model="email">
+            </div>
+            <div class="field">
+                <input :class="{error: formErrors.password}" type="password" placeholder="password" v-model="password">
+            </div>
             <div class="col-md-4">
                 <div class="accent2-button" @click="login">Submit</div>
             </div>
